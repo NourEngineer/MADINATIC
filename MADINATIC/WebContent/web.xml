@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wep_app>
+	<servlet>
+		<servlet_name>Servlet</servlet_name>
+		<servlet_class>com.madinatic.servlet.Servlet</servlet_class>
+	</servlet>
+
+	<servlet_mapping>
+		<servlet_name>Servlet</servlet_name>
+		<servlet_pattern>/Servlet</servlet_pattern>
+	</servlet_mapping>
+</wep_app>
+
