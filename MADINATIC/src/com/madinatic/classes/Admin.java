@@ -11,4 +11,11 @@ public class Admin extends User{
 			System.out.println("j'ai pas peu admin");
 		}
 	}
+	public void addService (Service ser) {
+		try {
+		daoFactory.getServiceDAO().create(ser);
+		}catch(Exception e){
+			System.out.println("j'ai pas peu admin");
+		}
+	}
 }

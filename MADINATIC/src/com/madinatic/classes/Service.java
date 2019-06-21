@@ -8,6 +8,7 @@ public class Service extends User{
 	private String site_web;
 	private int id_town;
 	
+	
 	public int getId_service() {
 		return id_service;
 	}
@@ -45,6 +46,9 @@ public class Service extends User{
 		this.id_town = id_town;
 	}
 	
+	public String username() {
+		return "SER"+getName()+getId_town();
+	}
 	
 }
 

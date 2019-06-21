@@ -53,14 +53,14 @@ public class Servlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 		
-	Supervisor sup = new Supervisor();
-		sup.setId_card(Integer.parseInt(request.getParameter("id_card")));
-		System.out.println("id card" + sup.getId_card());
-		sup.setPhone_number((String)request.getParameter("phone_number"));
-		System.out.println("phone" + sup.getPhone_number());
-		sup.setId_town(1);
-		sup.setPassword("kjkfj");
-		admin.addSupervisor(sup);
+		Service ser = new Service();
+		ser.setId_card(Integer.parseInt(request.getParameter("AgentService")));
+		System.out.println("id card" + ser.getId_card());
+		ser.setName((String)request.getParameter("ServiceName"));
+		System.out.println("phone" + ser.getName());
+		ser.setId_town(1);
+		ser.setType_service(TypeService.INTERN);
+		admin.addService(ser);
 		
 	}
 

@@ -1,6 +1,8 @@
 package Dao;
 import java.sql.*;
 
+import com.madinatic.exception.MadinaticException;
+
 public abstract class DAO<T> {
 	public Connection connection;
 	   
@@ -13,7 +15,7 @@ public abstract class DAO<T> {
 	  * @return boolean 
 	 * @throws SQLException 
 	  */
-	  public abstract boolean create(T obj) throws SQLException;
+	  public abstract boolean create(T obj) throws SQLException , MadinaticException;
 
 	  /**
 	  * Méthode pour effacer

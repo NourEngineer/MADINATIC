@@ -34,9 +34,9 @@ $(document).ready(function(){
 
 <button>Ajouter Superviseur</button> 
 <button>Ajouter Service</button>
-<!--  
+ 
 <div name="service">
-	<form action="Post" >
+	<form method="post" action="Servlet" >
 		<label name="ServiceName">Nom de Service</label>
 		<input type="text" name="ServiceName"><br>
 		<label name="AgentService">ID carte</label>
@@ -61,16 +61,24 @@ $(document).ready(function(){
 		      </li>
 		    </ul>
 		 </div> 
+		 	<div class="dropdown"> 
+		    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Type Service 
+		    <span class="caret"></span></button>
+		    <ul class="dropdown-menu">
+		          <li><a tabindex="-1" href="#">Interne</a></li>
+		          <li><a tabindex="-1" href="#">Externe</a></li>
+		    </ul>
+		 </div> 
 		 <input type="submit">
 	</form>
-</div>-->
+</div>
 
-	<form method="post" action="Servlet" >
+<!-- <form method="post" action="Servlet" >
 		<label name="id_card">ID carte</label>
 		<input type="text" name="id_card"/><br>
 		<label name="phone_number">Numero de telephone</label>
 		<input type="text" name="phone_number"/><br>
-		<!--  <div class="dropdown"> 
+		 <div class="dropdown"> 
 		    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Commune
 		    <span class="caret"></span></button>
 		    <ul class="dropdown-menu">
@@ -89,10 +97,10 @@ $(document).ready(function(){
 		        </ul>
 		      </li>
 		    </ul>
-		 </div> -->
+		 </div> 
 		 <input type="submit"/>
 	</form>
-
+ -->	
 
 </body>
 </html>

@@ -43,5 +43,14 @@ public class DaoFactory {
 			return null;
 		}
 	}
+	public ServiceDAO getServiceDAO() {
+		try {
+		return new ServiceDAO(this.getConnection());
+		}catch(Exception e ) {
+			e.getMessage();
+			System.out.println("j'ai pas peu ser dao");
+			return null;
+		}
+	}
 	
 }
