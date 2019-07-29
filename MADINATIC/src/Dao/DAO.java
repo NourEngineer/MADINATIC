@@ -21,8 +21,9 @@ public abstract class DAO<T> {
 	  * Méthode pour effacer
 	  * @param obj
 	  * @return boolean 
+	 * @throws SQLException 
 	  */
-	  public abstract boolean delete(T obj);
+	  public abstract boolean delete(T obj) throws SQLException;
 
 	  /**
 	  * Méthode de mise à jour

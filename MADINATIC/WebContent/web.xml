@@ -10,4 +10,3 @@
 		<servlet_pattern>/Servlet</servlet_pattern>
 	</servlet_mapping>
 </wep_app>
-

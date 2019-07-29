@@ -1,3 +1,40 @@
-body{
-	background : pink;
+/*body {
+	linear-gradient(rgba(250,215,215,0,18),rgba(3,196,235,0,32));/*url(backgroung.jpg) top center fixed;
+	
+	width: 100%;
+	height: 100vh;
+	background: url(backgroung.jpg),linear-gradient(rgba(200,215,215,0.18),rgba(3,196,235,0.32));
+	
+	background:#000;
+	background-size: cover;
+	background: linear-gradient(#e66465, #9198e5),url();
+	background:url(backgroung.jpg) top center fixed;
+	background-repeat: no-repeat;
+	background-size: contain;
+	
+		opacity:0.75;
+			Navigateurs récents 
+		background-image: -moz-linear-gradient(
+				top,
+				rgba(250,215,215,0,18),
+				rgba(3,196,235,0,32)
+			);
+}*/
+body {
+	width: 100%;
+	hieght: 100%;
+	background:linear-gradient(rgba(0, 0, 0, 0.7),
+		rgba(0, 0, 0, 0.5))top center fixed,url(city.jpg) top center fixed;
+	background-size: cover;
+}
+img {
+	width: 200px;
+	height: 200px;
+	filter: brightness(50%);
+	-webkit-filter: brightness(60%);
+}
+
+img:hover {
+	filter: brightness(100%);
+	-webkit-filter: brightness(100%);
 }

@@ -19,6 +19,7 @@ public class ServiceDAO extends DAO<Service>{
 		verifyIdcard(obj);
 		connection.prepareStatement("insert into Employee(id_card) value("+obj.getId_card()+")").execute();
 		connection.prepareStatement("insert into Acount values('"+obj.username()+"','"+obj.generatePassword()+"')").execute();
+		System.out.println("here");
 		connection.prepareStatement(""
 				+ "insert into Service(id_card,service_name,username,current_,type_service,id_town)"
 				+ " value("+obj.getId_card()+",'"+obj.getName()+
@@ -28,20 +29,27 @@ public class ServiceDAO extends DAO<Service>{
 		return true;
 	}
 	public void verifyDuplication(Service obj) throws ServiceException , SQLException {
-		PreparedStatement state = connection.prepareStatement("select * from Service where service_name="+obj.getName()+" and id_town="+obj.getId_town());
-		if(state.executeQuery().getFetchSize()!= 0) throw new ServiceException();
+		PreparedStatement state = connection.prepareStatement("select * from Service where service_name = '"+obj.getName()+"' and id_town="+obj.getId_town());
+		if(state.executeQuery().getFetchSize()!= 0) throw new ServiceException(true,false);
 	}
 	public void verifyIdcard(Service obj) throws ServiceException , SQLException{
 		try { Class.forName("com.mysql.jdbc.Driver");}
 				catch(ClassNotFoundException e) {}
 		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/People","root","t;forever33");
 		PreparedStatement state = connection.prepareStatement("select * from People where id_card ="+obj.getId_card());
-		if(state.executeQuery().getFetchSize()==0) throw new ServiceException();
+		ResultSet set = state.executeQuery();
+		set.last();
+		System.out.println("size of people having id card"+obj.getId_card() +" "+ set.getRow());
+		
+		while(set.next()) System.out.println(set.getInt("id_card"));
+		if(set.getRow()==0) throw new ServiceException(false,true);
+		connection.close();
 	}
 
 	@Override
-	public boolean delete(Service obj) {
-		// TODO Auto-generated method stub
+	public boolean delete(Service obj) throws SQLException {
+		
+		connection.prepareStatement("delete from Service where id_service = " + obj.getId_service());
 		return false;
 	}
 

@@ -2,7 +2,7 @@ package com.madinatic.servlet;
 
 import java.io.IOException;
 import com.madinatic.classes.*;
-
+import com.madinatic.exception.ServiceException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,7 +35,7 @@ public class Servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		this.getServletContext().getRequestDispatcher("/WEB-INF/Admin.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/Accueil.jsp").forward(request, response);
 		DaoFactory daoFactory = DaoFactory.getInstance();
 		try {
 		PreparedStatement preparedStat = daoFactory.getConnection()
@@ -57,10 +57,19 @@ public class Servlet extends HttpServlet {
 		ser.setId_card(Integer.parseInt(request.getParameter("AgentService")));
 		System.out.println("id card" + ser.getId_card());
 		ser.setName((String)request.getParameter("ServiceName"));
-		System.out.println("phone" + ser.getName());
+		System.out.println("Name " + ser.getName());
 		ser.setId_town(1);
 		ser.setType_service(TypeService.INTERN);
-		admin.addService(ser);
+		String message ="";
+		try{
+			admin.addService(ser);
+		}catch (ServiceException service) {
+			message = service.getMessage();
+			System.out.println(message);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
