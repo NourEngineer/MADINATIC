@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+.icon_add {
+	position : absolute;
+	right : 25px;
+	top : 11%;
+	float : right;
+	width : 35px;
+	height : 35px;
+	filter: brightness(70%);
+}
+
+#sup , #ser,#dec{
+	display : inline-block;
+	width: 32%;
+	height: 100%;
+	background:#fff2;
+	
+}
+
+/************** Form CSS******************/
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
+h2{
+display : inline;
+text-align: left;
+font-size: 30px;
+margin-left: 9px;
+color: #4A777A;
+float : left;
+}
+hr{
+margin-bottom: 30px;
+color: white;
+}
+.exit{
+	display : inline;
+	color : #0006;
+	float : left;
+	margin-bottom : 50px;
+	cursor: pointer;
+}
+.icon_add:hover{
+	filter: brightness(100%);
+}
+/*div.container{
+width: 960px;
+height: 610px;
+margin:50px auto;
+font-family: 'Droid Serif', serif;
+position:relative;
+z-index: 99;
+}*/
+div.main{
+width:  420px;
+float:left;
+background-color: #678;/*rgba(255, 255, 255, 0.8);*/
+border: 2px solid #678;
+box-shadow: 0 0 10px;
+border-radius: 2px;
+font-size: 13px;
+position: fixed;
+z-index: 3;
+left: 500px;
+top:100px;
+height: 400px;
+
+}
+/*input[type=text] {
+width: 97.7%;
+height: 34px;
+padding-left: 5px;
+margin-bottom: 20px;
+margin-top: 8px;
+box-shadow: 0 0 5px #fff;
+border: 2px solid #;
+color: #4f4f4f;
+font-size: 16px;
+}*/
+#register {
+textalign : center;
+background: #666; /*#F0A9BA;/*linear-gradient(black 1%, #22abe9 100%);*/
+border: none;
+color: white;
+cursor: pointer;
+border-radius: 50%;
+width: 52px;
+height: 40px;
+float: right;
+margin-right: 20px;
+}
+#register:hover{
+	
+}
+
+#info{
+	width: 100%;
+	height: 60%;
+}
+#inputs{
+	float: right;
+	width: 70%;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+#labels{
+	float: left;
+	width: 25%;
+	padding-left: 35px;
+	padding-top: 10px; 
+	cursor: pointer;
+}
+#labels label{
+	color: #000;
+	margin-bottom: 30px;
+}
+#inputs input{
+	margin-bottom: 20px; 
+	height: 30px; 
+	border-top: none; 
+	border-left: none; 
+	border-right: none;
+	width: 230px;
+	background : #678;
+}
+#subm{
+	height: 20%; 
+}
+form{
+	height: 100%;
+	display: block;
+}
+
+	#headfrom{
+		width: 100%;
+		display: inline-flex;
+		height: 12%;
+	}
+	#headfrom h2{
+		width: 90%;
+		float: left;
+	}
+	#headfrom #exit{
+		width: 10%;
+		float: right;
+		margin-top: 25px;
+		height: 80%;
+		cursor: pointer;
+}
+
+/****************************************/
+#sup{
+	left:0;
+	float : left;
+	margin : 0 5px auto;
+	position : absolute;
+
+}
+#dec{
+	right :0;
+	float : left;
+	margin:auto;
+	position : absolute;
+}
+
+#ser{
+	float : left;
+	margin : 0 28% auto;
+	position : absolute;	
+	
+}
+
+body {
+	
+	background: linear-gradient(rgba(0, 0, 0, 0.7),
+		rgba(0, 0, 0, 0.5))top center fixed, url("city.jpg") center top fixed;
+	background-size : cover;
+	margin :0;
+	padding: 0;
+
+}
+
+.container {	
+	width: 100%;
+	height: 100%;
+	display : block;
+
+}
+.plus{
+	display : inline-block;
+	background : #fff;
+	width : 90%;
+	height : 90%;
+
+
+}
+img{
+	width :100px;
+	height : 100px;
+}
+.champ{
+	display : inline-block;
+	font-size : 20px;
+	color : black;
+	border-bottom: 2px solid;
+	margin-left : 9px;
+	margin-top : 9px;
+}
+#nav{
+	display : none;
+}
+p {
+	color: white;
+	font-size: 30px;
+
+}
+.contenu {
+	display : block;
+}
+#navig{
+	display : block;
+}
+.class{
+	display : inline;
+}
+
+
+/************* Affichage WILAYA **************/
+.wilayas{
+	width : 100%;
+	height : 100%;
+	
+}
+.wilaya{
+	display : block;
+	border: 2px solid #678;
+	border-top: none; 
+	border-left: none; 
+	border-right: none;
+	width : 100%;
+	height : 10%;
+}
+.name{
+	position : absolute;
+	display : inline;
+	color : black;
+	font-size : 20px;
+	margin-left : 10px;
+	margin-top : 10px;
+}
+.nb{
+	position : absolute;
+	display : inline;
+	color : black;
+	font-size : 20px;
+	margin-left : 10px;
+	margin-top : 10px;
+	float : right;
+	right : 57px;
+}
+/*********************************************/
