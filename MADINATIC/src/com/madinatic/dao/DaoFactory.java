@@ -1,4 +1,4 @@
-package Dao;
+package com.madinatic.dao;
 import java.sql.*;
 
 public class DaoFactory {

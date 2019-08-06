@@ -9,4 +9,11 @@
 		<servlet_name>Servlet</servlet_name>
 		<servlet_pattern>/Servlet</servlet_pattern>
 	</servlet_mapping>
+	
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+		</jsp-property-group>
+	</jsp-config>
 </wep_app>

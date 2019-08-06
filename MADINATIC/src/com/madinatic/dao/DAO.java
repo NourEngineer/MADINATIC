@@ -1,4 +1,4 @@
-package Dao;
+package com.madinatic.dao;
 import java.sql.*;
 
 import com.madinatic.exception.MadinaticException;
@@ -36,7 +36,8 @@ public abstract class DAO<T> {
 	  * Méthode de recherche des informations
 	  * @param id
 	  * @return T
+	 * @throws SQLException 
 	  */
-	  public abstract T find(int id);
+	  public abstract T find(int id) throws SQLException;
 	
 }

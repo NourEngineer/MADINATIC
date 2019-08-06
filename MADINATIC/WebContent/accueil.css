@@ -9,15 +9,57 @@
 	height : 35px;
 	filter: brightness(70%);
 }
+.circle{
+	border-radius: 50%;
+	background: white;
+	opacity: 0.4;
+	width: 100px;
+	hieght: 100px;
+	margin : 10px;
+}
+.circle:hover{
+	opacity : 1;
+}
 
-#sup , #ser,#dec{
+ /*#ser,#dec{
 	display : inline-block;
 	width: 32%;
 	height: 100%;
 	background:#fff2;
 	
+}*/
+.left{
+	left:0;
+	float : left;
+	margin : 0 5px auto;
+	position : inherit;
+	display: inline-block;
 }
+.right{
+	display: inline-block;
+	left:0;
+	float : left;
+	margin : 10px;
+	position : inherit;
+	background: rgba(255, 255, 255, 1);;
+	width : 80%;
+}
+.pWlc{
+ text-align: center;
+line-height: 300px;
+color: #222;
 
+}
+#sup{
+	
+}
+.logo{
+	width : 70px;
+	height : 50px;
+	margin-left : 20px;
+	margin-top : 5px;
+	display : block;
+}
 /************** Form CSS******************/
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 h2{
@@ -29,7 +71,6 @@ color: #4A777A;
 float : left;
 }
 hr{
-margin-bottom: 30px;
 color: white;
 }
 .exit{
@@ -60,8 +101,8 @@ border-radius: 2px;
 font-size: 13px;
 position: fixed;
 z-index: 3;
-left: 500px;
-top:100px;
+left: 200px;
+top:50px;
 height: 400px;
 
 }
@@ -149,14 +190,8 @@ form{
 }
 
 /****************************************/
-#sup{
-	left:0;
-	float : left;
-	margin : 0 5px auto;
-	position : absolute;
 
-}
-#dec{
+/*#dec{
 	right :0;
 	float : left;
 	margin:auto;
@@ -165,25 +200,26 @@ form{
 
 #ser{
 	float : left;
-	margin : 0 28% auto;
+	margin : 0 21% auto;
 	position : absolute;	
 	
-}
+}*/
 
 body {
 	
 	background: linear-gradient(rgba(0, 0, 0, 0.7),
-		rgba(0, 0, 0, 0.5))top center fixed, url("city.jpg") center top fixed;
-	background-size : cover;
+		rgba(0, 0, 0, 0.3))top center fixed, url("societyUp.png") center top fixed;
+	background-size : contain;
 	margin :0;
 	padding: 0;
-
+	
 }
 
 .container {	
 	width: 100%;
 	height: 100%;
 	display : block;
+	display : none;
 
 }
 .plus{
@@ -206,19 +242,24 @@ img{
 	margin-left : 9px;
 	margin-top : 9px;
 }
+.champ:hover{
+	color: #4A888A;
+}
 #nav{
 	display : none;
 }
 p {
-	color: white;
+	color: black;
 	font-size: 30px;
 
 }
 .contenu {
 	display : block;
+	margin : 10px;
 }
 #navig{
 	display : block;
+	margin-bottom : 0px;
 }
 .class{
 	display : inline;
@@ -228,7 +269,7 @@ p {
 /************* Affichage WILAYA **************/
 .wilayas{
 	width : 100%;
-	height : 100%;
+	height : 500px;;
 	
 }
 .wilaya{
@@ -238,24 +279,37 @@ p {
 	border-left: none; 
 	border-right: none;
 	width : 100%;
-	height : 10%;
 }
+.wilaya:hover{
+	background : silver;
+}
+
+.town{
+	display : block;
+	border: 2px solid #678;
+	border-top: none; 
+	border-left: none; 
+	border-right: none;
+	width : 100%;
+}
+.town:hover{
+	background : silver;
+}
+
+
 .name{
-	position : absolute;
-	display : inline;
+	display : inline-block;
 	color : black;
 	font-size : 20px;
+	text-align: center;
+	line-height: 70px;
 	margin-left : 10px;
-	margin-top : 10px;
 }
 .nb{
-	position : absolute;
-	display : inline;
+	display : inline-block;
 	color : black;
 	font-size : 20px;
-	margin-left : 10px;
-	margin-top : 10px;
 	float : right;
-	right : 57px;
+	line-height: 70px;
 }
 /*********************************************/

@@ -1,10 +1,9 @@
-package Dao;
-
-import Dao.DAO;
+package com.madinatic.dao;
 
 import java.sql.*;
 
 import com.madinatic.classes.Supervisor;
+import com.madinatic.dao.DAO;
 
 public class SupervisorDAO extends DAO<Supervisor>{
 	
@@ -17,7 +16,7 @@ public class SupervisorDAO extends DAO<Supervisor>{
 	public boolean create(Supervisor obj) throws SQLException {
 		PreparedStatement state = connection.prepareStatement("update Town set supervised = true where id_town = "+obj.getId_town());
 		state.executeUpdate();
-		state = connection.prepareStatement("insert into Employee(id_card) value("+obj.getId_card() + ")");
+		state = connection.prepareStatement("insert into Employee(id_card) value("+obj.getId_town()+ ")");
 		state.executeUpdate();
 		ResultSet result = connection.prepareStatement("select * from Supervisor where id_town = "+Integer.toString(obj.getId_town())).executeQuery();
 		int position = result.getFetchSize();
@@ -26,7 +25,7 @@ public class SupervisorDAO extends DAO<Supervisor>{
 			state.executeUpdate();
 
 		PreparedStatement statement = connection.prepareStatement(
-				"insert into Supervisor values("+obj.getId_card()+","+obj.getId_town()+",true,'"+obj.username(0)+"')");
+				"insert into Supervisor values("+obj.getId_town()+","+obj.getId_town()+",true,'"+obj.username(0)+"')");
 		statement.executeUpdate();
 		return true;
 	}
