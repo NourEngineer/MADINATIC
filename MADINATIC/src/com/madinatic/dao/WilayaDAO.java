@@ -57,6 +57,17 @@ public class WilayaDAO extends DAO<Wilaya>{
 				Town town = new Town();
 				town.setId_town(set2.getInt("id_town"));
 				town.setName(set2.getString("name_"));
+				System.out.println("------------"+set2.getString("name_"));
+				//recupération des services
+				ResultSet set3 = connection.prepareStatement("SELECT id_service FROM Service where id_town ="+town.getId_town()).executeQuery();
+				ArrayList<Service> services = new ArrayList<>();
+				while(set3.next()) {
+					Service service;
+					ServiceDAO serviceDAO = new ServiceDAO(connection); 
+					service = serviceDAO.find(set3.getInt("id_service"));
+					services.add(service);
+				}
+				town.setServices(services);
 				towns.add(town);
 			}
 			wilaya.setTowns(towns);

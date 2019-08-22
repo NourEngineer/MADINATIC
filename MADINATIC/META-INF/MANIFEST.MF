@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MADINATIC
+Bundle-SymbolicName: MADINATIC
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.madinatic.classes,
+ com.madinatic.dao,
+ com.madinatic.exception,
+ com.madinatic.servlet

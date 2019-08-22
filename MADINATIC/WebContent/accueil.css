@@ -17,6 +17,10 @@
 	hieght: 100px;
 	margin : 10px;
 }
+.circle img{
+		width :100px;
+	height : 100px;
+}
 .circle:hover{
 	opacity : 1;
 }
@@ -75,9 +79,8 @@ color: white;
 }
 .exit{
 	display : inline;
-	color : #0006;
+	color : #f006;
 	float : left;
-	margin-bottom : 50px;
 	cursor: pointer;
 }
 .icon_add:hover{
@@ -91,7 +94,7 @@ font-family: 'Droid Serif', serif;
 position:relative;
 z-index: 99;
 }*/
-div.main{
+.main{
 width:  420px;
 float:left;
 background-color: #678;/*rgba(255, 255, 255, 0.8);*/
@@ -103,7 +106,6 @@ position: fixed;
 z-index: 3;
 left: 200px;
 top:50px;
-height: 400px;
 
 }
 /*input[type=text] {
@@ -177,7 +179,7 @@ form{
 		display: inline-flex;
 		height: 12%;
 	}
-	#headfrom h2{
+	#headfrom>h2{
 		width: 90%;
 		float: left;
 	}
@@ -185,7 +187,6 @@ form{
 		width: 10%;
 		float: right;
 		margin-top: 25px;
-		height: 80%;
 		cursor: pointer;
 }
 
@@ -205,16 +206,18 @@ form{
 	
 }*/
 
-body {
+/*body {
 	
 	background: linear-gradient(rgba(0, 0, 0, 0.7),
 		rgba(0, 0, 0, 0.3))top center fixed, url("societyUp.png") center top fixed;
 	background-size : contain;
-	margin :0;
-	padding: 0;
 	
 }
-
+*/
+body{
+	back-ground : white;
+	color: white;
+}
 .container {	
 	width: 100%;
 	height: 100%;
@@ -230,10 +233,10 @@ body {
 
 
 }
-img{
+/*img{
 	width :100px;
 	height : 100px;
-}
+}*/
 .champ{
 	display : inline-block;
 	font-size : 20px;
@@ -241,6 +244,7 @@ img{
 	border-bottom: 2px solid;
 	margin-left : 9px;
 	margin-top : 9px;
+	cursor: pointer;
 }
 .champ:hover{
 	color: #4A888A;
@@ -248,11 +252,11 @@ img{
 #nav{
 	display : none;
 }
-p {
+/*p {
 	color: black;
 	font-size: 30px;
 
-}
+}*/
 .contenu {
 	display : block;
 	margin : 10px;
@@ -263,13 +267,15 @@ p {
 }
 .class{
 	display : inline;
+	font-size: 50px;
+	
 }
 
 
 /************* Affichage WILAYA **************/
 .wilayas{
 	width : 100%;
-	height : 500px;;
+	height : 100%;;
 	
 }
 .wilaya{
@@ -293,6 +299,18 @@ p {
 	width : 100%;
 }
 .town:hover{
+	background : silver;
+}
+
+.service{
+	display : block;
+	border: 2px solid #678;
+	border-top: none; 
+	border-left: none; 
+	border-right: none;
+	width : 100%;
+}
+.service:hover{
 	background : silver;
 }
 

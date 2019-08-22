@@ -6,6 +6,12 @@ import com.madinatic.exception.MadinaticException;
 public abstract class DAO<T> {
 	public Connection connection;
 	   
+	public Connection getConnection() {
+		return connection;
+	}
+	public void setConnection(Connection connection) {
+		this.connection = connection;
+	}
 	public DAO(Connection connection) {
 		this.connection = connection;
 	}

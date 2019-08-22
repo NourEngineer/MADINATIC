@@ -6,7 +6,8 @@ public class Service extends User{
 	private TypeService type_service;
 	private String email;
 	private String site_web;
-	private int id_town;
+	private Town town = new Town();
+	private Employee employee;
 	
 	
 	public int getId_service() {
@@ -39,15 +40,21 @@ public class Service extends User{
 	public void setSite_web(String site_web) {
 		this.site_web = site_web;
 	}
-	public int getId_town() {
-		return id_town;
-	}
-	public void setId_town(int id_town) {
-		this.id_town = id_town;
-	}
 	
 	public String username() {
-		return "SER"+getName()+getId_town();
+		return "SER"+getName()+town.getId_town();
+	}
+	public Town getTown() {
+		return town;
+	}
+	public void setTown(Town town) {
+		this.town = town;
+	}
+	public Employee getEmployee() {
+		return employee;
+	}
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
 	}
 	
 }

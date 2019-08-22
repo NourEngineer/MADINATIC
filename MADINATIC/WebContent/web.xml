@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wep_app>
-	<servlet>
-		<servlet_name>Servlet</servlet_name>
-		<servlet_class>com.madinatic.servlet.Servlet</servlet_class>
-	</servlet>
-
-	<servlet_mapping>
-		<servlet_name>Servlet</servlet_name>
-		<servlet_pattern>/Servlet</servlet_pattern>
-	</servlet_mapping>
-	
-	<jsp-config>
-		<jsp-property-group>
-			<url-pattern>*.jsp</url-pattern>
-			<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
-		</jsp-property-group>
-	</jsp-config>
-</wep_app>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <servlet>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>com.madinatic.servlet.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/Servlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UpdateTownServlet</servlet-name>
+    <servlet-class>com.madinatic.servlet.UpdateTownServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateTownServlet</servlet-name>
+    <url-pattern>/UpdateTown</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CreateTownServlet</servlet-name>
+    <servlet-class>com.madinatic.servlet.CreateTownServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateTownServlet</servlet-name>
+    <url-pattern>/CreateTown</url-pattern>
+  </servlet-mapping>
+</web-app>

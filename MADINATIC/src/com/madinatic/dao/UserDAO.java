@@ -1,6 +1,7 @@
 package com.madinatic.dao;
 
 import java.sql.Connection;
+import com.madinatic.classes.*;
 import java.sql.SQLException;
 
 import com.madinatic.classes.User;
@@ -16,7 +17,8 @@ public class UserDAO extends DAO<User>{
 	@Override
 	public boolean create(User obj) throws SQLException, MadinaticException {
 		// TODO Auto-generated method stub
-		connection.prepareStatement("insert into Acount values('"+obj.username()+"','"+User.generatePassword()+"','"+java.time.LocalDate.now() +"')").execute();
+		connection.prepareStatement("insert into Acount values('"+((Service)obj).username()+"','"+User.generatePassword()+"','"+java.time.LocalDate.now() +"')").execute();
+		
 		return false;
 	}
 
