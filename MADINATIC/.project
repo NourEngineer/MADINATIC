@@ -3,6 +3,7 @@
 	<name>MADINATIC</name>
 	<comment></comment>
 	<projects>
+		<project>git_MADINATIC</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
